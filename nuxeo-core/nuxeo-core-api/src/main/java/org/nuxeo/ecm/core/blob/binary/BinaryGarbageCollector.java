@@ -81,4 +81,12 @@ public interface BinaryGarbageCollector {
      */
     boolean isInProgress();
 
+    /**
+     * Reset start time. This is required if the process throws an error before the end not to block the next call to
+     * the GC
+     *
+     * @since 2023.0
+     */
+    void reset();
+
 }
